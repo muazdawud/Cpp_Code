@@ -1,0 +1,5 @@
+
+First, make a universal file that has the username.
+Then a sub_file that can be accessed by the info stored in the universal file, this stores the registration info of the user
+Then a file that the account balance that will be used to transfer or withdraw a given amount from
+Then a file that appends the date and the time of each transaction (and all other info like who recieved the money)

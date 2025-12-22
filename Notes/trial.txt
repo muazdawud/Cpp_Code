@@ -1,0 +1,17 @@
+cout << "Bye-bye.\n";
+                cout << "..............................................................................\n";
+                exit(0);
+
+if(ans == 1){
+        withdraw(acc_num);
+    }else if(ans == 2){
+        transfer(acc_num);
+    }else if(ans == 3){
+        deposit(acc_num);
+    }else if(ans == 4){
+        cout << "Bye-bye\n";
+        cout << "..............................................................................\n";
+        exit(0);
+    }else{
+        operation_check();
+    }

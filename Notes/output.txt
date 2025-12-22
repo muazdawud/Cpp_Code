@@ -1,0 +1,6 @@
+ make a boolean function to check if there is a saved database for a given login username
+ try to change a file name from it's initial name to the username input given (so that fetching the file of a user won't spend much time)
+ Check the while loop on line 166
+ Continue the project by testing error posibilities
+ Also, make a date function or something of sort that can check the date registered with to not allow it more than the real time date
+ Try a way to differentiate the functons using headers from different file (file linking)
