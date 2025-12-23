@@ -12,25 +12,25 @@ public:
 		cout << num << "/" << den << endl;
 	}
 
-	friend Fraction operator*(const Fraction& num1, const Fraction& num2);
-	friend Fraction operator*(const Fraction& num1, int value);
-	friend Fraction operator*(int value, const Fraction& num1);
+	friend Fraction operator * (const Fraction& num1, const Fraction& num2);
+	friend Fraction operator * (const Fraction& num1, int value);
+	friend Fraction operator * (int value, const Fraction& num1);
 };
 
-Fraction operator*(const Fraction& num1, const Fraction& num2){
+Fraction operator * (const Fraction& num1, const Fraction& num2){
 	int n_temp = num1.num * num2.num;
 	int d_temp = num1.den * num2.den;
 
 	return Fraction {n_temp, d_temp};
 }
 
-Fraction operator*(const Fraction& num1, int value){
+Fraction operator * (const Fraction& num1, int value){
 	int n_temp = num1.num * value;
 
 	return Fraction {n_temp, num1.den};
 }
 
-Fraction operator*(int value, const Fraction& num1){
+Fraction operator * (int value, const Fraction& num1){
 	int n_temp = num1.num * value;
 
 	return Fraction {n_temp, num1.den};
