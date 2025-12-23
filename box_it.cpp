@@ -24,6 +24,32 @@ using namespace std;
 //ostream& operator<<(ostream& out, Box& B)
 
 
+
+class Box{
+private:
+	int l, b, h;
+public:
+	Box() : l{0}, b{0}, h{0} {}
+	Box(int len, int bre, int hei) : l{len}, b{bre}, h{hei} {}
+	Box(const Box& box) : l{box.l}, b{box.h}, h{box.h} {}
+
+	int getLength(){
+		return l;
+	}
+	int getBreadth(){
+		return b;
+	}
+	int getHeight(){
+		return h;
+	}
+
+	long long CalculateVolume(){
+		int sum = l*b*h;
+
+		return sum;
+	}
+};
+
 void check2()
 {
 	int n;
