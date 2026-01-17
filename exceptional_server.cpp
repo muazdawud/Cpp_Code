@@ -34,7 +34,15 @@ int main() {
 		long long A, B;
 		cin >> A >> B;
 
-		/* Enter your code here. */
+		try{
+			cout << Server::compute(A, B) << "\n";
+		}catch(bad_alloc& r){
+			cout << "Not enough memory\n";
+		}catch(exception& except){
+			cout << "Exception: " << except.what() << "\n";
+		}catch(...){
+			cout << "Other Exception\n";
+		}
 
 	}
 	cout << Server::getLoad() << endl;
