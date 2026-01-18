@@ -26,6 +26,7 @@ public:
 		return load;
 	}
 };
+
 int Server::load = 0;
 
 int main() {

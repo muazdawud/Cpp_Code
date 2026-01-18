@@ -26,8 +26,7 @@ class Equilateral : public Isosceles{
     }
 };
 
-int main(){
-  
+int main(){ 
     Equilateral eqr;
     eqr.equilateral();
     eqr.isosceles();
