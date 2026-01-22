@@ -8,7 +8,7 @@ public:
     HotelRoom(int bedrooms, int bathrooms) 
     : bedrooms_(bedrooms), bathrooms_(bathrooms) {}
     
-    int get_price() {
+    virtual int get_price() {
         return 50*bedrooms_ + 100*bathrooms_;
     }
 private:
@@ -21,7 +21,7 @@ public:
     HotelApartment(int bedrooms, int bathrooms) 
     : HotelRoom(bedrooms, bathrooms) {}
 
-    int get_price() {
+    virtual int get_price() {
         return HotelRoom::get_price() + 100;
     }
 };
@@ -46,11 +46,7 @@ int main() {
     for (auto room : rooms) {
         total_profit += room->get_price();
     }
-    cout << total_profit << endl;
-
-    for (auto room : rooms) {
-        delete room;
-    }
+    cout << total_profit << endl; 
     rooms.clear();
 
     return 0;
