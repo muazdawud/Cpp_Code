@@ -7,18 +7,18 @@ using namespace std;
 class Message {
 private:
     string text;
-    int msg_id = 0;
+    int msg_id;
 public: 
-    Message() { msg_id++; }
+    Message() {}
     Message(const string& line, int num) : text(line), msg_id(num) {}
 
-    const string& get_text(){
+    const string& get_text() const {
         return text;
     }
 
     bool operator < (const Message& msg1){
 
-        return msg_id < msg1.msg_id;
+        return this->msg_id < msg1.msg_id;
     }
 };
 
@@ -64,17 +64,18 @@ public:
         }
     }
 };
-
-
-
+ 
 int main() {
     MessageFactory message_factory;
     Recipient recipient;
     vector<Message> messages;
+
     string text;
+
     while (getline(cin, text)) {
         messages.push_back(message_factory.create_message(text));
     }
+
     Network::send_messages(messages, recipient);
     recipient.print_messages();
 }
